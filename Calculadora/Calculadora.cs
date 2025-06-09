@@ -8,34 +8,34 @@
         }
         public void Sumar(double termino)
         {
-            numero += valorInicial;
+            numero += termino;
         }
         public void Restar(double termino)
         {
-            numero -= valorInicial;
+            numero -= termino;
         }
         public void Multiplicar(double termino)
         {
-            numero *= valorInicial;
+            numero *= termino;
         }
         public void Dividir(double termino)
         {
-            if (termino!=0)
+            if (termino != 0)
             {
-                numero /= valorInicial;
-            }else
-            {
-                throw new DivideByZeroException("No se puede dividir por cero")
+                numero /= termino;
             }
-            public double Resultado()
+            else
             {
-                get => numero;
+                throw new DivideByZeroException("No se puede dividir por cero");
             }
-            public void Limpiar()
-            {
-                numero=0;
-            }
-            
+        }
+        public double Resultado
+        {
+            get => numero;
+        }
+        public void Limpiar()
+        {
+            numero=0;
         }
     }
 }
